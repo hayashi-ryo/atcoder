@@ -19,7 +19,7 @@ int main() {
         string tmp_S ="";
         string tmp_M ="";
         cin >> tmp_S >> tmp_M;
-        seimei.at(i) = tmp_S+tmp_M;
+        seimei.at(i) = tmp_S+"."+tmp_M;
     }
 
     // vector<int> vals_b=b;
