@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int N=0;
     cin >> N;
-    vector<int> vec(N);
+    vector<int64_t> vec(N);
     int64_t tmpsum=0;
     for (int i=0;i<N;i++) {
         cin >> vec.at(i);
@@ -12,15 +12,13 @@ int main() {
     }
     int64_t X=0;
     cin >> X;
-    int i=(X/tmpsum);
-    //cout << i << endl;
-    int64_t sum=i*tmpsum;//配列を足し合わせていく
-    int li=0;
-    while(sum<X) {
-        int tmp=li%N;
-        sum+=vec.at(tmp);
-        li++;
-        //cout << sum << " " << i << endl;
+    int64_t q=X/tmpsum;
+    int64_t p=N*q;
+    int64_t sum=tmpsum*q;
+    for (int i=0;i<N;i++) {
+        sum+=vec.at(i);
+        p++;
+        if(sum>X) {break;}
     }
-    cout << i*N+li << endl;
+    cout << p << endl;
 }
