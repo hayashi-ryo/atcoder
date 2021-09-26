@@ -9,7 +9,7 @@ int main() {
     while (flag==0) {
         cin >> a >> op >> b;
         int tmp=0;
-        if (a==0) {
+        if (op=='?') {
             flag=1;
             continue;
         }
