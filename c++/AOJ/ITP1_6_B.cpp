@@ -4,10 +4,10 @@ using namespace std;
 int main() {
     int N=0;
     cin >> N;
-    vector<int> S(13)=100;
-    vector<int> H(13)=100;
-    vector<int> C(13)=100;
-    vector<int> D(13)=100;
+    vector<int> S(0);
+    vector<int> H(0);
+    vector<int> C(0);
+    vector<int> D(0);
     for (int i=0;i<N;i++) {
         char mark;
         int fig=0;
@@ -26,10 +26,29 @@ int main() {
     sort(H.begin(), H.end());
     sort(C.begin(), C.end());
     sort(D.begin(), D.end());
-
+    int tmpS=0,tmpH=0,tmpC=0,tmpD=0;
     for (int i=0;i<13;i++) {
-        if ((i+1)!=S.at(i)) {
-            cout << "S " << i << endl; 
-        }
+        if ((i+1)!=S.at(tmpS)) {
+            cout << "S " << i+1 << endl; 
+        } else {tmpS++;}
     }
+    for (int i=0;i<13;i++) {
+        if ((i+1)!=H.at(tmpH)) {
+            cout << "H " << i+1 << endl; 
+        } else {tmpH++;}
+    }
+    for (int i=0;i<13;i++) {
+        if ((i+1)!=C.at(tmpC)) {
+            cout << "C " << i+1 << endl; 
+        } else {tmpC++;}
+    }
+    for (int i=0;i<13;i++) {
+        if ((i+1)!=D.at(tmpD)) {
+            cout << "D " << i+1 << endl; 
+        } else {tmpD++;}
+    }
+    //cout << "S" << S.size() << endl;
+    //cout << "H" << H.size() << endl;
+    //cout << "C" << C.size() << endl;
+    //cout << "D" << D.size() << endl;
 }
