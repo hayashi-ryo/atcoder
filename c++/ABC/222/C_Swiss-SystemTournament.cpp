@@ -15,4 +15,5 @@ int judge(string a,string b) {
 int main() {
     int N=0,M=0;
     cin >> N >> M;
+    
 }
