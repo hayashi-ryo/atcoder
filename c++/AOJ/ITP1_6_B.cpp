@@ -2,53 +2,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-    int N=0;
-    cin >> N;
-    vector<int> S(0);
-    vector<int> H(0);
-    vector<int> C(0);
-    vector<int> D(0);
-    for (int i=0;i<N;i++) {
-        char mark;
-        int fig=0;
-        cin >> mark >> fig;
-        if (mark=='S') {
-            S.push_back(fig);
-        } else if (mark=='H') {
-            H.push_back(fig);
-        } else if (mark=='C') {
-            C.push_back(fig);
-        } else if (mark=='D') {
-            D.push_back(fig);
-        }
+    int n;
+    cin >> n;
+    vector<int> S(13);
+    vector<int> H(13);
+    vector<int> C(13);
+    vector<int> D(13);
+    for (int i=1;i<=n;i++) {
+        char c;
+        int num=0;
+        cin >> c >> num;
+        if (c=='S') {S[num]=1;}
+        else if(c=='H') {H[num]=1;}
+        else if(c=='C') {C[num]=1;}
+        else if(c=='D') {D[num]=1;}
     }
-    sort(S.begin(), S.end());
-    sort(H.begin(), H.end());
-    sort(C.begin(), C.end());
-    sort(D.begin(), D.end());
-    int tmpS=0,tmpH=0,tmpC=0,tmpD=0;
-    for (int i=0;i<13;i++) {
-        if ((i+1)!=S.at(tmpS)) {
-            cout << "S " << i+1 << endl; 
-        } else {tmpS++;}
-    }
-    for (int i=0;i<13;i++) {
-        if ((i+1)!=H.at(tmpH)) {
-            cout << "H " << i+1 << endl; 
-        } else {tmpH++;}
-    }
-    for (int i=0;i<13;i++) {
-        if ((i+1)!=C.at(tmpC)) {
-            cout << "C " << i+1 << endl; 
-        } else {tmpC++;}
-    }
-    for (int i=0;i<13;i++) {
-        if ((i+1)!=D.at(tmpD)) {
-            cout << "D " << i+1 << endl; 
-        } else {tmpD++;}
-    }
-    //cout << "S" << S.size() << endl;
-    //cout << "H" << H.size() << endl;
-    //cout << "C" << C.size() << endl;
-    //cout << "D" << D.size() << endl;
+    for (int i=0;i<4;i++) {
+        for (int j=1;j<=13;j++) {
+            //cout << S[j] << endl;
+            if(i==0) {
+                if(S[j]!=1) {cout << "S " << j << endl;}
+            } else if(i==1) {
+                if(H[j]!=1) {cout << "H " << j << endl;}
+            } else if(i==2) {
+                if(C[j]!=1) {cout << "C " << j << endl;}
+            } else if(i==3) {
+                if(D[j]!=1) {cout << "D " << j << endl;}
+            }
+        } 
+    } 
 }
