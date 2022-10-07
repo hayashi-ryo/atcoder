@@ -24,3 +24,5 @@ docker
     `docker build --rm -t atcoder .`
     `docker images`
 2. docker-composeでアクセス
+3. 拡張機能のインストール
+   1. Command Runnerの設定
