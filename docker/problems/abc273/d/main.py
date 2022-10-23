@@ -1,55 +1,47 @@
-#!/usr/bin/env pypy   
-
-h,w,y,x=map(int,input().split())
-x-=1
-y-=1
-kabe=[[0]*h for i in range(w)]
-n=int(input())
+from collections import defaultdict
+from bisect import bisect_left, bisect_right
+h,w,rs,cs = map(int,input().split())
+n = int(input())
+rwall = defaultdict(list)
+cwall = defaultdict(list)
 for i in range(n):
-  r,c=map(int,input().split())
-  kabe[r-1][c-1]=1
+  r,c = map(int,input().split())
+  rwall[r].append(c)
+  cwall[c].append(r)
 
-q=int(input())
+for k in rwall.keys():
+  rwall[k].sort()
+for k in cwall.keys():
+  cwall[k].sort()
+
+
+q = int(input())
 for i in range(q):
-  d,l=map(str,input().split())
-  l=int(l)
-  for j in range(l):
-    #左に進む
-    if(d=="L"):
-      if((x-1)<0):
-        break
-      elif(kabe[y][x-1]==1):
-        break
-      else:
-        x-=1
-    
-    #右に進む
-    if(d=="R"):
-      if((x+1)>=w):
-        break
-      elif(kabe[y][x+1]==1):
-        break
-      else:
-        x+=1
-    
-    #上に進む
-    if(d=="U"):
-      if((y-1)<0):
-        break
-      elif(kabe[y-1][x]==1):
-        break
-      else:
-        y-=1
-    
-    #下に進む
-    if(d=="D"):
-      if((y+1)>=h):
-        break
-      elif(kabe[y+1][x]==1):
-        break
-      else:
-        y+=1
-  print(y+1,x+1)
-
-
-
+  d,l = map(str,input().split())
+  l = int(l)
+  if d == "L":
+    t = bisect_right(rwall[rs],cs)
+    if t == 0:
+      cs = max(cs-l, 1)
+    else:
+      cs = max(cs-l, rwall[rs][t-1]+1)
+  if d == "R":
+    t = bisect_left(rwall[rs],cs)
+    if t == len(rwall[rs]):
+      cs = min(cs+l, w)
+    else:
+      cs = min(cs+l, rwall[rs][t]-1)
+  if d == "U":
+    t = bisect_right(cwall[cs],rs)
+    if t == 0:
+      rs = max(rs-l, 1)
+    else:
+      rs = max(rs-l, cwall[cs][t-1]+1)
+  if d == "D":
+    t = bisect_left(cwall[cs],rs)
+    if t == len(cwall[cs]):
+      rs = min(rs+l, h)
+    else:
+      rs = min(rs+l, cwall[cs][t]-1)
+  print(rs,cs)
+  
