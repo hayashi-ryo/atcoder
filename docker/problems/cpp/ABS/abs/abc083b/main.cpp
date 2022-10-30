@@ -3,10 +3,10 @@ using namespace std;
 int ketasum(int N)
 {
   int ketasum = 0;
-  for (int i = to_string(ketasum).length(); i > -1; i--)
+  while (N > 0)
   {
-    ketasum += N / 10 ^ (i - 1);
-    cout << i << ":" << ketasum;
+    ketasum += N % 10;
+    N /= 10;
   }
   return ketasum;
 }
@@ -20,7 +20,7 @@ int main()
   {
     if (A <= ketasum(i) && ketasum(i) <= B)
     {
-      ans++;
+      ans += i;
     }
   }
   cout << ans << endl;
