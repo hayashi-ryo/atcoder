@@ -14,4 +14,4 @@ AtCoderの学習を行うにあたって必要あアルゴリズムと実装例�
 
 ### コンテスト
 
-[./ABC/276/contest.md](ABC276)
+[ABC276](./ABC/276/contest.md)
