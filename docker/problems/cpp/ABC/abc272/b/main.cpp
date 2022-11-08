@@ -1,36 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-  int N, M;
-  cin >> N >> M;
-  vector<int> Nlist(N);
-  for (int i = 0; i < N; i++)
+  int n, m;
+  cin >> n >> m;
+  vector<vector<bool>> chk(n, vector<bool>(n, false));
+  for (int i = 0; i < m; i++)
   {
-    int k = 0;
-    for (int j = 0; j < k; j++)
+    int k;
+    cin >> k;
+    vector<int> a(k);
+    for (auto &v : a)
+      cin >> v, --v;
+    for (int j = 0; j < (int)a.size() - 1; j++)
     {
-      int x;
-      cin >> x;
-      Nlist[x - 1] += 1;
-    }
-    cout << Nlist[i] << endl;
-  }
-  bool flag = true;
-  for (int i = 0; i < N; i++)
-  {
-    if (Nlist[i] < 2)
-    {
-      cout << "test " << Nlist[i] << endl;
-      flag = false;
+      for (int k = j + 1; k < (int)a.size(); k++)
+      {
+        chk[a[j]][a[k]] = true;
+      }
     }
   }
-  if (flag)
+  bool ans = 1;
+  for (int i = 0; i < n; i++)
   {
-    cout << "Yes" << endl;
+    for (int j = i + 1; j < n; j++)
+    {
+      ans &= chk[i][j];
+    }
   }
-  else
-  {
-    cout << "No" << endl;
-  }
+  cout << (ans ? "Yes" : "No") << endl;
 }
