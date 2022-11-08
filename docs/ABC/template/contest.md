@@ -1,13 +1,10 @@
-# ABC276
+# ABCXXX
 
-[ABC276](https://atcoder.jp/contests/abc276)
+[ABCXXX](https://atcoder.jp/contests/abcXXX)
 
 ## 所感
 
 - A問題B問題は問題なく解ける範囲
-- C問題について、実装はできたがTLEになってしまった
-  - コンテスト後の解説ですごく便利なコマンドを知れたことが収穫
-- D問題について、基本的な方針はあっていた。
 
 ### A問題
 
