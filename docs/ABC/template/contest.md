@@ -1,4 +1,4 @@
-# ABC276
+# ABCXXX
 
 [ABCXXX](https://atcoder.jp/contests/abcXXX)
 
