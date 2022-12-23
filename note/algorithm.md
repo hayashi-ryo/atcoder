@@ -47,10 +47,28 @@
 
 ソートアルゴリズムの中でも最も基本的な概念の一つです。配列の中から最大/最小値を探索し、先頭/末尾と入れ替えることでソートを進めます。
 
-#### アルゴリズム
+#### 選択ソート アルゴリズム
 
 基本的には、最小の要素を見つけて先頭と入れ替えることでソートを進めます。
 
 1. i=0とする
 2. i番目から末尾まですべての要素を確認し、最小の要素とi番目の要素を入れ替える
 3. i++として、iが配列の長さを超えるまで繰り返し実行する。
+
+```c++
+vectro<int> list[10];
+
+for(int i=0;i<list.size();i++){
+   int minValue = list[i];
+   int minIndex = i;
+   for(int j==i+1;list.size();j++){
+      if(minValue>list[j]){
+         minValue=list[j];
+         minIndex=j;
+      }
+   }
+   tmp = list[i];
+   list[i] = list[minIndex];
+   list[minIndex] = tmp;
+}
+```
