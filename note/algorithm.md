@@ -97,3 +97,30 @@ for(int i=0;i<list.size();i++){
    }
 }
 ```
+
+### 　挿入ソート(Insertion Sort)
+
+小さい要素を前に挿入するために、他の要素を一つずつ前にずらしていく。ソート済の配列に対して要素を追加したい場合に高速。
+
+#### 挿入ソート　アルゴリズム
+
+1. iを1からn-1までループさせる
+   1. i番目の値をtmpとする
+   2. j=i-1とする
+   3. j>=0かつtmp>list[j]の間以下をループ
+      1. list[j]をlist[j+1]に格納する
+      2. j--
+   4. tmpをlist[j+1]に格納する
+
+```c++
+for(int i=1;i<n;i++){
+   tmp=list[i];
+   j=i-1;
+   while (j>=0 and list[j]>tmp){
+      list[j+1]=list[j];
+      j=j-1;
+   }
+   lit[j+1]=tmp;
+}
+
+```
