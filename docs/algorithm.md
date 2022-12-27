@@ -58,21 +58,38 @@
 3. i++として、iが配列の長さを超えるまで繰り返し実行する。
 
 ```c++
-vectro<int> list[10];
-
-for(int i=0;i<list.size();i++){
-   int minValue = list[i];
-   int minIndex = i;
-   for(int j==i+1;list.size();j++){
-      if(minValue>list[j]){
-         minValue=list[j];
-         minIndex=j;
-      }
-   }
-   tmp = list[i];
-   list[i] = list[minIndex];
-   list[minIndex] = tmp;
+int main(){
+    vector<int> list{5,3,10,13,1,2,2,8,10,2};
+    vector<int> listB;
+    listB=list;
+    for(int i=0;i<list.size();i++){
+       int minValue = list[i];
+       int minIndex = i;
+       int tmp;
+       for(int j=i+1;j<list.size();j++){
+          if(minValue>list[j]){
+             minValue=list[j];
+             minIndex=j;
+          }
+       }
+       tmp = list[i];
+       list[i] = list[minIndex];
+       list[minIndex] = tmp;
+    }
+    for(int i=0;i<list.size();i++){
+        cout << listB[i] << " ";
+    }
+    cout << endl;
+    for(int i=0;i<list.size();i++){
+        cout << list[i] << " ";
+    }
+    cout << endl;
 }
+```
+
+```output
+5 3 10 13 1 2 2 8 10 2 
+1 2 2 2 3 5 8 10 10 13 
 ```
 
 ### バブルソート
