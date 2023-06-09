@@ -22,20 +22,19 @@ int main()
     }
   }
 
-  vector<int> s1(N + 1, 0);
-  vector<int> s2(N + 1, 0);
-  for (int i = 0; i < N; i++)
-  {
-    s1[i + 1] = s1[i] + A_class[i];
-    s2[i + 1] = s2[i] + B_class[i];
-  }
-
   int Q;
   cin >> Q;
   for (int i = 0; i < Q; i++)
   {
+    int A_sum = 0;
+    int B_sum = 0;
     int L, R;
     cin >> L >> R;
-    cout << s1[R] - s1[L - 1] << " " << s2[R] - s2[L - 1] << endl;
+    for (int j = L - 1; j < R; j++)
+    {
+      A_sum += A_class[j];
+      B_sum += B_class[j];
+    }
+    cout << A_sum << " " << B_sum << endl;
   }
 }
