@@ -4,24 +4,16 @@
 
 ## 星2
 
-1. 002 Encyclopedia of Parentheses
-2. 004 Cross Sum
-4. 010 Score Sum Queries
-5. 022 Cubic Cake
-6. 024 Select +／- One
-7. 027　Sign Up Requests
-8. 033 Not Too Bright
-9. 055 Select 5
-10. 061 Deck
-11. 067 Base 8 to 9
-12. 078 Easy Graph Problem
-
-### 002 Encyclopedia of Parentheses
-
-- カッコをそれぞれ01で表現して、整合性がとれているもののみを抽出する
-- この問題では以下のbitに対する操作を学んだ
-  - `for (int bit = 0; bit < (1 << N); ++bit)`
-    - 特定の値域の全bit探索
+1. 004 Cross Sum
+2. 010 Score Sum Queries
+3. 022 Cubic Cake
+4. 024 Select +／- One
+5. 027　Sign Up Requests
+6. 033 Not Too Bright
+7. 055 Select 5
+8. 061 Deck
+9. 067 Base 8 to 9
+10. 078 Easy Graph Problem
 
 ### 004 Cross Sum
 
@@ -67,3 +59,14 @@
 ### 078 Easy Graph Problem
 
 - グラフを配列に格納し、値ごとに計算を行うだけ
+
+## 　星3
+
+1. 002 Encyclopedia of Parentheses
+
+### 002 Encyclopedia of Parentheses
+
+- カッコをそれぞれ01で表現して、整合性がとれているもののみを抽出する
+- この問題では以下のbitに対する操作を学んだ
+  - `for (int bit = 0; bit < (1 << N); ++bit)`
+    - 特定の値域の全bit探索
