@@ -10,10 +10,13 @@ atcoder勉強用の環境を構築する。言語ベースはpythonだが、今�
 
 ```dir
 docker
-└──image
-    ├──Dockerfile
-    ├──docker-compose.yml
-    └──data:
+├──Dockerfile
+├──docker-compose.yml
+├──library   -> /root/library
+├──.vscode   -> /root/.vscode:cached
+├──templates -> /root/.config/atcoder-cli-nodejs
+├──problems  -> /root/problems
+└──../note   -> /root/note
 ```
 
 ### 　環境構築
