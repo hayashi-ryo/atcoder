@@ -25,7 +25,7 @@ AtCoderの学習を行うにあたって以下の情報を整理する。
 - [ABS参考サイト](https://qiita.com/drken/items/fd4e5e3630d0f5859067#5-%E9%81%8E%E5%8E%BB%E5%95%8F%E7%B2%BE%E9%81%B8-10-%E5%95%8F)
   - ABS各問題の解説や、参考サイト情報をまとめている
 - [AtCoder Problems](https://kenkoooo.com/atcoder/#/table/)
-  - AtCoderの回答状況を一覧かしてくれるサイト
+  - AtCoderの回答状況を一覧化してくれるサイト
 - [AtCoder 版！蟻本 (初級編)](https://qiita.com/drken/items/e77685614f3c6bf86f44)
   - プログラミングコンテストチャレンジブックをAtCoder向けに再構築したもの
 
