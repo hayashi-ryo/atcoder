@@ -28,6 +28,8 @@ AtCoderの学習を行うにあたって以下の情報を整理する。
   - AtCoderの回答状況を一覧化してくれるサイト
 - [AtCoder 版！蟻本 (初級編)](https://qiita.com/drken/items/e77685614f3c6bf86f44)
   - プログラミングコンテストチャレンジブックをAtCoder向けに再構築したもの
+- [AtCoder Replay](https://atcoder-replay.kakira.dev/)
+  - コンテストごとのレーティング変化の確認
 
 ## 問題演習
 
