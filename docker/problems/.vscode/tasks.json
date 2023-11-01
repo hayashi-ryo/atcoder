@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "atcoder_test",
+			"group": "build",
+			"type": "shell",
+			"command": "${workspaceFolder}/cpp/cptest.sh",
+			"args": [
+				"${relativeFileDirname}",
+				"${file}"
+			]
+		}
+	]
+}
