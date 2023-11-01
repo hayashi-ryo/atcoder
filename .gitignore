@@ -10,3 +10,5 @@
 # ignore対象リストから除外するもの
 !settings.json
 !tasks.json
+!config.json
+!template.json
