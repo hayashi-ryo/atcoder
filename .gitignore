@@ -1,3 +1,4 @@
+# ignore対象リスト
 *
 !*/
 !*.*
@@ -5,3 +6,7 @@
 *.json
 *.in
 *.out
+
+# ignore対象リストから除外するもの
+!settings.json
+!tasks.json
