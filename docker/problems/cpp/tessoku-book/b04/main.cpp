@@ -6,21 +6,19 @@ using ll = long long;
 
 int main()
 {
-  int N, X;
-  cin >> N >> X;
-  int i = 0;
-  string ans = "No";
-  while (i < N)
+  string N;
+  cin >> N;
+  int ans = 0;
+  int power = N.size() - 1;
+  for (int i = 0; i < N.size(); ++i)
   {
-    int a;
-    cin >> a;
-    if (a == X)
+    if (N[i] == '1')
     {
-      ans = "Yes";
-      break;
+      ans += pow(2, power);
     }
-    ++i;
+    --power;
   }
+
   cout << ans << endl;
   return 0;
 }
