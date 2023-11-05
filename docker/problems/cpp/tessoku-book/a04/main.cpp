@@ -6,5 +6,9 @@ using ll = long long;
 
 int main()
 {
+  int N;
+  cin >> N;
+  string ans = bitset<10>(N).to_string();
+  cout << ans << endl;
   return 0;
 }

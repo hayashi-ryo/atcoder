@@ -6,5 +6,7 @@ using ll = long long;
 
 int main()
 {
-  return 0;
+  int N;
+  cin >> N;
+  cout << N * N << endl;
 }
