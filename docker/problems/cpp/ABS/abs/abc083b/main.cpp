@@ -1,24 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
-int ketasum(int N)
+using ll = long long;
+
+int sumOfDigits(int n)
 {
-  int ketasum = 0;
-  while (N > 0)
+  int sum = 0;
+  while (n > 0)
   {
-    ketasum += N % 10;
-    N /= 10;
+    sum += (n % 10);
+    n /= 10;
   }
-  return ketasum;
+  return sum;
 }
+
 int main()
 {
-  int N, A, B;
-  cin >> N >> A >> B;
+  int n, a, b;
+  cin >> n >> a >> b;
   int ans = 0;
-  // cout << "10:" << ketasum(10);
-  for (int i = 1; i < N + 1; i++)
+
+  for (int i = 1; i < n + 1; i++)
   {
-    if (A <= ketasum(i) && ketasum(i) <= B)
+    int x = sumOfDigits(i);
+    if (a <= x && x <= b)
     {
       ans += i;
     }

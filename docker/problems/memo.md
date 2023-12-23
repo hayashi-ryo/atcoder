@@ -10,6 +10,7 @@
   `oj test`
   実態は`oj test -c \" pypy ${fileDirname}/main.py\" -d ${fileDirname}/tests/`
   - ショートカットコマンドはCtrl+Shift+T
+  - ショートカットコマンドはCtrl+Shift+B
 - 提出
   - 提出は以下コマンドを利用する
   `acc submit'

@@ -13,6 +13,7 @@ services:
       - ./library:/root/library:cached
       - ./.vscode:/root/.vscode:cached
       - ./templates:/root/.config/atcoder-cli-nodejs
+      - ../note:/root/note:cached
     command: acc config default-template py
     command: tail -f /dev/null
     stdin_open: true

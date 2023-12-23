@@ -1,33 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+
 int main()
 {
-  int N, Y;
-  cin >> N >> Y;
-  bool flag = false;
-  for (int i = N; i > -1; i--)
+  int n, y;
+  cin >> n >> y;
+
+  for (int i = 0; i < n + 1; i++)
   {
-    if (flag)
-      break;
-    for (int j = N - i; j > -1; j--)
+    int sum = 0;
+    for (int j = 0; j < n + 1 - i; j++)
     {
-      if (flag)
-        break;
-      for (int k = N - (i + j); k > -1; k--)
+      sum = 10000 * i + 5000 * j + 1000 * (n - i - j);
+      if (sum == y)
       {
-        if (flag)
-          break;
-        if (i * 10000 + j * 5000 + k * 1000 == Y and (i + j + k) == N)
-        {
-          flag = true;
-          cout << i << " " << j << " " << k << endl;
-          break;
-        }
+        cout << i << " " << j << " "
+             << (n - i - j) << endl;
+        return 0;
+      }
+      else if (sum > y)
+      {
+        break;
       }
     }
   }
-  if (flag != true)
-  {
-    cout << -1 << " " << -1 << " " << -1 << endl;
-  }
+  cout << "-1 -1 -1" << endl;
+  return 0;
 }
