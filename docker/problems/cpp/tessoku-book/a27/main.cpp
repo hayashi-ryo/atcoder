@@ -6,4 +6,8 @@ using ll = long long;
 
 int main()
 {
+  int A, B;
+  cin >> A >> B;
+  cout << gcd(A, B) << endl;
+  return 0;
 }
