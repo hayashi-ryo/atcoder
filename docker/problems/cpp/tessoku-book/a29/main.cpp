@@ -6,4 +6,7 @@ using ll = long long;
 
 int main()
 {
+  int a, b;
+  cin >> a >> b;
+  return 0;
 }
