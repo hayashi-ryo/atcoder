@@ -6,4 +6,16 @@ using ll = long long;
 
 int main()
 {
+  ll N;
+  cin >> N;
+  ll ans = 0;
+  // 3で割り切れる個数
+  ans += (N / 3);
+  // 5で割り切れる個数
+  ans += (N / 5);
+  // 3と5で割り切れる個数
+  ans -= (N / 15);
+
+  cout << ans << endl;
+  return 0;
 }
