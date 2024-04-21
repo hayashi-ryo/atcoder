@@ -1,25 +1,26 @@
 {
-  "files.associations": {
-    "ostream": "cpp",
-    "iostream": "cpp",
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp",
 <<<<<<< HEAD
     "valarray": "cpp",
-    "initializer_list": "cpp",
-    "typeindex": "cpp",
-    "typeinfo": "cpp",
-    "array": "cpp",
-    "deque": "cpp",
-    "forward_list": "cpp",
-    "list": "cpp",
-    "string": "cpp",
-    "unordered_map": "cpp",
-    "unordered_set": "cpp",
-    "vector": "cpp",
-    "string_view": "cpp",
-    "regex": "cpp",
-    "iomanip": "cpp"
+        "initializer_list": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp",
+        "iomanip": "cpp"
 =======
     "random": "cpp"
->>>>>>> a4c6658 ([feat]: Complete to ABC issue of ABC349)
-  }
+>>>>>>> a4c6658 ([feat
+        ]: Complete to ABC issue of ABC349)
+    }
 }
