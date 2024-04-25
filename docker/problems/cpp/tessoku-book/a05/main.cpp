@@ -6,5 +6,19 @@ using ll = long long;
 
 int main()
 {
+  int N, K;
+  cin >> N >> K;
+  int ans = 0;
+  for (int i = 1; i <= N; i++)
+  {
+    for (int j = 1; j <= N; j++)
+    {
+      if (K - i - j > 0 && K - i - j <= N)
+      {
+        ans++;
+      }
+    }
+  }
+  cout << ans << endl;
   return 0;
 }
