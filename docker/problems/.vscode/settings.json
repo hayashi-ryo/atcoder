@@ -2,10 +2,7 @@
   "files.associations": {
     "ostream": "cpp",
     "iostream": "cpp",
-    "valarray": "cpp",
-    "initializer_list": "cpp",
-    "typeindex": "cpp",
-    "typeinfo": "cpp",
+    "random": "cpp",
     "array": "cpp",
     "deque": "cpp",
     "forward_list": "cpp",
@@ -15,7 +12,9 @@
     "unordered_set": "cpp",
     "vector": "cpp",
     "string_view": "cpp",
+    "initializer_list": "cpp",
     "regex": "cpp",
-    "iomanip": "cpp"
+    "valarray": "cpp",
+    "*.tcc": "cpp"
   }
 }
