@@ -8,18 +8,16 @@ int main()
 {
   int N, X;
   cin >> N >> X;
+  vector<int> A(N);
+  rep(i, N) cin >> A[i];
   string ans = "No";
-  int i = 0;
-  while (i < N)
+  for (int i = 0; i < N; i++)
   {
-    int a;
-    cin >> a;
-    if (a == X)
+    if (A[i] == X)
     {
       ans = "Yes";
       break;
     }
-    ++i;
   }
   cout << ans << endl;
   return 0;

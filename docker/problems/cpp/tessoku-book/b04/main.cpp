@@ -9,16 +9,13 @@ int main()
   string N;
   cin >> N;
   int ans = 0;
-  int power = N.size() - 1;
-  for (int i = 0; i < N.size(); ++i)
+  for (int i = 0; i < N.size(); i++)
   {
     if (N[i] == '1')
     {
-      ans += pow(2, power);
+      ans += pow(2, N.size() - i - 1);
     }
-    --power;
   }
-
   cout << ans << endl;
   return 0;
 }

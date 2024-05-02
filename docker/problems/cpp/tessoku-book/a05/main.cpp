@@ -9,13 +9,13 @@ int main()
   int N, K;
   cin >> N >> K;
   int ans = 0;
-  for (int i = 1; i < N + 1; ++i)
+  for (int i = 1; i <= N; i++)
   {
-    for (int j = 1; j < N + 1; ++j)
+    for (int j = 1; j <= N; j++)
     {
-      if (1 <= (K - i - j) && (K - i - j) < N + 1)
+      if (K - i - j > 0 && K - i - j <= N)
       {
-        ++ans;
+        ans++;
       }
     }
   }

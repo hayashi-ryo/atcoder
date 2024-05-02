@@ -3,38 +3,26 @@ using namespace std;
 using ll = long long;
 
 #define rep(i, x) for (int i = 0; i < (x); i++)
-const int x = 1000;
+
 int main()
 {
   int N;
   cin >> N;
-  vector<int> a(N);
-  rep(i, N) cin >> a[i];
-  sort(a.begin(), a.end());
-
+  vector<int> A(N);
+  rep(i, N) cin >> A[i];
+  sort(A.begin(), A.end());
   string ans = "No";
-  for (int i = 0; i < N; ++i)
+  for (int i = 0; i < N; i++)
   {
-    bool breakFlag = false;
-    for (int j = i + 1; j < N; ++j)
+    for (int j = i + 1; j < N; j++)
     {
-      for (int k = j + 1; k < N; ++k)
+      for (int k = j + 1; k < N; k++)
       {
-        if (a[i] + a[j] + a[k] == x)
+        if (A[i] + A[j] + A[k] == 1000)
         {
-          breakFlag = true;
           ans = "Yes";
-          break;
         }
       }
-      if (breakFlag)
-      {
-        break;
-      }
-    }
-    if (breakFlag)
-    {
-      break;
     }
   }
 
