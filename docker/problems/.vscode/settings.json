@@ -2,11 +2,7 @@
   "files.associations": {
     "ostream": "cpp",
     "iostream": "cpp",
-<<<<<<< HEAD
-    "valarray": "cpp",
-    "initializer_list": "cpp",
-    "typeindex": "cpp",
-    "typeinfo": "cpp",
+    "random": "cpp",
     "array": "cpp",
     "deque": "cpp",
     "forward_list": "cpp",
@@ -16,11 +12,9 @@
     "unordered_set": "cpp",
     "vector": "cpp",
     "string_view": "cpp",
+    "initializer_list": "cpp",
     "regex": "cpp",
-    "iomanip": "cpp"
-=======
-    "random": "cpp"
->>>>>>> a4c6658 ([feat
-    ]: Complete to ABC issue of ABC349)
+    "valarray": "cpp",
+    "*.tcc": "cpp"
   }
 }
