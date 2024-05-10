@@ -2,6 +2,7 @@
   "files.associations": {
     "ostream": "cpp",
     "iostream": "cpp",
+<<<<<<< HEAD
     "valarray": "cpp",
     "initializer_list": "cpp",
     "typeindex": "cpp",
@@ -17,5 +18,8 @@
     "string_view": "cpp",
     "regex": "cpp",
     "iomanip": "cpp"
+=======
+    "random": "cpp"
+>>>>>>> a4c6658 ([feat]: Complete to ABC issue of ABC349)
   }
 }
