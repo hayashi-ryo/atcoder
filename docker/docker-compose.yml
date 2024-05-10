@@ -11,9 +11,9 @@ services:
       - ./problems:/root/problems:cached
       - ./library:/root/library:cached
       - ./.vscode:/root/.vscode:cached
-      - ./templates:/root/.config/atcoder-cli-nodejs
+      - ./templates:/root/.config/atcoder-cli-nodejs:cached
       - ../note:/root/note:cached
     command: >
-      /bin/sh -c 'acc config default-template py && tail -f /dev/null'
+      /bin/sh -c 'acc config default-template py && tail -f /dev/null && acc config default-template cpp'
     stdin_open: true
     tty: true
