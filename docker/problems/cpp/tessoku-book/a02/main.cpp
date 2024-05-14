@@ -6,19 +6,5 @@ using ll = long long;
 
 int main()
 {
-  int N, X;
-  cin >> N >> X;
-  vector<int> A(N);
-  rep(i, N) cin >> A[i];
-  string ans = "No";
-  for (int i = 0; i < N; i++)
-  {
-    if (A[i] == X)
-    {
-      ans = "Yes";
-      break;
-    }
-  }
-  cout << ans << endl;
   return 0;
 }
