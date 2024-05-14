@@ -7,15 +7,18 @@ using ll = long long;
 int main()
 {
   string N;
-  cin >> N;
   int ans = 0;
+  cin >> N;
+  int power = N.size() - 1;
   for (int i = 0; i < N.size(); i++)
   {
     if (N[i] == '1')
     {
-      ans += pow(2, N.size() - i - 1);
+      ans += pow(2, power);
     }
+    --power;
   }
+
   cout << ans << endl;
   return 0;
 }

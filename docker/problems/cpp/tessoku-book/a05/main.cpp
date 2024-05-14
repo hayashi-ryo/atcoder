@@ -13,12 +13,13 @@ int main()
   {
     for (int j = 1; j <= N; j++)
     {
-      if (K - i - j > 0 && K - i - j <= N)
+      if (1 <= (K - i - j) && (K - i - j) <= N)
       {
-        ans++;
+        ++ans;
       }
     }
   }
+
   cout << ans << endl;
   return 0;
 }

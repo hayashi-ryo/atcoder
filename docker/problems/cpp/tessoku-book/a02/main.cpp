@@ -10,15 +10,14 @@ int main()
   cin >> N >> X;
   vector<int> A(N);
   rep(i, N) cin >> A[i];
-  string ans = "No";
-  for (int i = 0; i < N; i++)
+
+  if (find(A.begin(), A.end(), X) == A.end())
   {
-    if (A[i] == X)
-    {
-      ans = "Yes";
-      break;
-    }
+    cout << "No" << endl;
   }
-  cout << ans << endl;
+  else
+  {
+    cout << "Yes" << endl;
+  }
   return 0;
 }
