@@ -6,5 +6,18 @@ using ll = long long;
 
 int main()
 {
+  int N, X;
+  cin >> N >> X;
+  vector<int> A(N);
+  rep(i, N) cin >> A[i];
+
+  if (find(A.begin(), A.end(), X) == A.end())
+  {
+    cout << "No" << endl;
+  }
+  else
+  {
+    cout << "Yes" << endl;
+  }
   return 0;
 }
