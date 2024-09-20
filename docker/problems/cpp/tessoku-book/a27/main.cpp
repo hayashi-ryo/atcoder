@@ -6,5 +6,26 @@ using ll = long long;
 
 int main()
 {
+  int A, B;
+  cin >> A >> B;
+  while (A >= 1 && B >= 1)
+  {
+    if (A >= B)
+    {
+      A = A % B;
+    }
+    else
+    {
+      B = B % A;
+    }
+  }
+  if (A == 0)
+  {
+    cout << B << endl;
+  }
+  else
+  {
+    cout << A << endl;
+  }
   return 0;
 }
