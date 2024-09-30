@@ -6,11 +6,8 @@ using ll = long long;
 
 int main()
 {
-  ll N;
-  cin >> N;
-  ll divide3 = N / 3;
-  ll divide5 = N / 5;
-  ll divide15 = N / 15;
-  cout << divide3 + divide5 - divide15 << endl;
+  int A, B;
+  cin >> A >> B;
+  cout << gcd(A, B) << endl;
   return 0;
 }

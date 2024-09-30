@@ -10,21 +10,19 @@ int main()
   cin >> N >> W;
   vector<pair<ll, ll>> goods(N + 1);
   rep(i, N) cin >> goods[i + 1].first >> goods[i + 1].second;
-  vector<vector<ll>> dp(N + 1, vector<ll>(W + 1, 0));
 
-  for (int i = 1; i <= N; i++) // 品物
+  vector<vector<ll>> dp(N + 1, vector<ll>(W + 1, 0));
+  for (int i = 1; i <= N; i++)
   {
-    for (int j = 0; j <= W; j++) // 重さ
+    for (int j = 0; j <= W; j++)
     {
-      if (j < goods[i].first) // 品物を選択できない場合
+      if (j < goods[i].first)
       {
         dp[i][j] = dp[i - 1][j];
       }
       else
       {
-        dp[i][j] = max(
-            dp[i - 1][j],
-            dp[i - 1][j - goods[i].first] + goods[i].second);
+        dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - goods[i].first] + goods[i].second);
       }
     }
   }
@@ -34,7 +32,6 @@ int main()
   {
     ans = max(ans, dp[N][i]);
   }
-
   cout << ans << endl;
   return 0;
 }
