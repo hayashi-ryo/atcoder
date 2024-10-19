@@ -4,8 +4,8 @@
 !*.*
 .DS_Store
 *.json
-#*.in
-#*.out
+*.in
+*.out
 
 # ignore対象リストから除外するもの
 !settings.json

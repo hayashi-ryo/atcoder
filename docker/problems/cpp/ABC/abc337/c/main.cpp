@@ -6,16 +6,28 @@ using ll = long long;
 
 int main()
 {
-  int N;
+  int N, idx;
   cin >> N;
-  vector<int> A(N);
-  vector<int> ans(N);
+  vector<int> A(N), B(N, N);
   for (int i = 0; i < N; i++)
   {
     cin >> A[i];
+    if (A[i] == -1)
+    {
+      idx = i;
+    }
+    else
+    {
+      A[i]--;
+      B[A[i]] = i;
+    }
   }
-  auto it = find(A.begin(), A.end(), -1);
-  ans[0] = it - A.begin() + 1;
-  cout << ans[0] << endl;
+
+  while (idx < N)
+  {
+    cout << idx + 1 << " ";
+    idx = B[idx];
+  }
+  cout << endl;
   return 0;
 }
