@@ -6,5 +6,9 @@ using ll = long long;
 
 int main()
 {
+  ll A, B;
+  cin >> A >> B;
+
+  cout << A / gcd(A, B) * B << endl;
   return 0;
 }
