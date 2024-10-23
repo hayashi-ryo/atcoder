@@ -18,6 +18,10 @@ int main()
     {
       ans.push_back(A[i]);
     }
+    if ((int)ans.size() == N)
+    {
+      break;
+    }
   }
 
   for (int i = 0; i < N; i++)
