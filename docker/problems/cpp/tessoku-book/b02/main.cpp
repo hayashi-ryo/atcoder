@@ -6,5 +6,16 @@ using ll = long long;
 
 int main()
 {
+  int A, B;
+  cin >> A >> B;
+  string ans = "No";
+  for (int i = A; i <= B; i++)
+  {
+    if (100 % i == 0)
+    {
+      ans = "Yes";
+    }
+  }
+  cout << ans << endl;
   return 0;
 }
