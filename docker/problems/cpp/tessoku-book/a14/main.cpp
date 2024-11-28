@@ -6,5 +6,36 @@ using ll = long long;
 
 int main()
 {
+  int N, K;
+  cin >> N >> K;
+  vector<int> A(N), B(N), C(N), D(N);
+  rep(i, N) cin >> A[i];
+  rep(i, N) cin >> B[i];
+  rep(i, N) cin >> C[i];
+  rep(i, N) cin >> D[i];
+
+  vector<int> AB, CD;
+  for (int i = 0; i < N; i++)
+  {
+    for (int j = 0; j < N; j++)
+    {
+      AB.push_back(A[i] + B[j]);
+      CD.push_back(C[i] + D[j]);
+    }
+  }
+
+  string ans = "No";
+  sort(CD.begin(), CD.end());
+  for (auto ab : AB)
+  {
+    auto it = lower_bound(CD.begin(), CD.end(), K - ab);
+    if (it != CD.end() && *it == K - ab)
+    {
+      ans = "Yes";
+      break;
+    }
+  }
+
+  cout << ans << endl;
   return 0;
 }
